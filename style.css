@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1000px;
+    /*border: 2px black solid;*/
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.description {
+    font-size: 20px;
+    text-align: center;
+}
+
+.add-block {
+    display: flex;
+    width: 700px;
+    margin: 25px auto;
+    padding: 10px 20px;
+    border: 2px green solid;
+    border-radius: 30px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.input-note {
+    font-size: 20px;
+    border: none;
+    flex-grow: 1;
+    outline: none;
+}
+
+.btn-add {
+    display: block;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background-color: lime;
+}
+
+.notes-block {
+
+}
+
+.notes-items {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.notes-items:hover {
+    color: red;
+}
+
+.empty-notes {
+    margin-top: 120px;
+    font-size: 22px;
+    color: grey;
+    text-align: center;
+}

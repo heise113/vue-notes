@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Notes</title>
+</head>
+<body>
+<div class="container" id="app">
+    <p class="title">Notes</p>
+    <p class="description">Для удаления заметки кликните на нее 2 раза</p>
+    <div class="add-block">
+        <input
+                placeholder="Напиши здесь тескт"
+                v-on:keydown.enter="addNote"
+                v-on:input="setInputValue"
+                v-bind:value="inputValue"
+                class="input-note"
+                type="text"
+        >
+        <button v-on:click="addNote" class="btn-add">Добавить</button>
+    </div>
+    <hr style="margin-bottom: 30px; margin-top: 80px">
+    <ul v-if="notes.length !== 0" class="notes-block">
+        <li v-on:dblclick="removeNote(i)" class="notes-items" v-for="(note, i) in notes">
+            {{ note }}
+        </li>
+    </ul>
+    <div class="empty-notes" v-if="notes.length === 0">
+        Заметок пока нет
+    </div>
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+<script src="main.js"></script>
+</body>
+</html>
